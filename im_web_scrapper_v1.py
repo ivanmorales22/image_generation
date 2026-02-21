@@ -1,8 +1,3 @@
-# Funcion de Descarga de Jerseys, Remeras, Playeras, Camisetas de futbol
-# del Club Deportivo Guadalajara, Atletico de Madrid, Club Junior (col), Olympiacos
-# Southampton, Sporting Gijon y Stoke City.
-#  
-# Autor: Ivan Morales 
 def descargar_playera(url_playera, driver, wait, carpeta_destino):
     try:
         print(f"\nProcesando: {url_playera}")
@@ -48,8 +43,9 @@ def iniciar_scraping():
 
     try:
         # 1. Ir al catálogo principal
-        print("Accediendo al catálogo principal de Olympiacos...")
+        print("Accediendo al catálogo principal de Olympiacos...") # Ojo a la Url
         driver.get("https://www.footballkitarchive.com/olympiacos-piraeus-kits/")
+        # Si deseas descargar las imagenes de otro club cambia el nombre del equipo
         time.sleep(3) # Pausa inicial para que cargue la estructura básica
 
         # 2. Hacer Scroll hasta el final (previene el Lazy Loading)
